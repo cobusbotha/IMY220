@@ -1,8 +1,8 @@
 import React from 'react';
-import Navigation from "../components/Navigation.js";
-import Feed from '../components/Feed.js';
-import Playlists from '../components/Playlists.js';
-import Search from '../components/Search.js';
+import Navigation from "../components/Navigation";
+import Feed from '../components/Feed';
+import Playlists from '../components/Playlists';
+import Search from '../components/Search';
 
 class Home extends React.Component {
   render() {

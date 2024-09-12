@@ -1,6 +1,6 @@
 import React from 'react';
-import Login from '../components/Login.js'
-import SignUp from '../components/SignUp.js';
+import Login from '../components/Login'
+import SignUp from '../components/SignUp';
 
 class Splash extends React.Component {
   render() {
@@ -9,7 +9,7 @@ class Splash extends React.Component {
         <h1>Log In</h1>
         <Login />
         <br/>
-        <h1>Otherwise create an account</h1>
+        <p>Otherwise create an account</p>
         <SignUp />
       </div>
     );
