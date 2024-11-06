@@ -4,8 +4,13 @@ import Header from "../components/Header.js";
 import PlaylistComponent from '../components/PlaylistComponent.js';
 import EditPlaylist from '../components/EditPlaylist.js';
 import ListComments from '../components/ListComments.js';
+<<<<<<< HEAD
 import { getCookie } from '../utils/cookie';
 import '../../public/assets/css/Playlist.css';
+=======
+import EditComment from '../components/EditComment.js';
+import { getCookie } from '../utils/cookie';
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
 
 class Playlist extends React.Component {
     constructor(props) {
@@ -15,10 +20,16 @@ class Playlist extends React.Component {
             songs: [],
             error: null,
             loggedInUserId: null,
+<<<<<<< HEAD
             newComment: "",
         };
     }
 
+=======
+        };
+    }
+    
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
     async componentDidMount() {
         const { id } = this.props.params;
         const loggedInUserId = getCookie('userId');
@@ -39,7 +50,11 @@ class Playlist extends React.Component {
             this.setState({ error: 'Playlist not found' });
             console.log("Error fetching playlist data:", error);
         }
+<<<<<<< HEAD
     };    
+=======
+    };
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
 
     fetchSongs = async (id) => {
         try {
@@ -54,6 +69,7 @@ class Playlist extends React.Component {
         }
     };
 
+<<<<<<< HEAD
     handleCommentChange = (e) => {
         this.setState({ newComment: e.target.value });
     };
@@ -85,6 +101,11 @@ class Playlist extends React.Component {
     render() {
         const { playlist, songs, error, loggedInUserId, newComment } = this.state;
 
+=======
+    render() {
+        const { playlist, songs, error, loggedInUserId } = this.state;
+        
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
         if (error) {
             return <div>{error}</div>;
         }
@@ -94,12 +115,16 @@ class Playlist extends React.Component {
         }
 
         const isOwner = playlist.userIDs.includes(loggedInUserId);
+<<<<<<< HEAD
         const hasSavedPlaylist = playlist.savedUserIDs && playlist.savedUserIDs.includes(loggedInUserId);
 
+=======
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
 
         return (
             <div>
                 <Header />
+<<<<<<< HEAD
                 <div className="playlist-container">
                     <PlaylistComponent 
                         name={playlist.name} 
@@ -128,6 +153,17 @@ class Playlist extends React.Component {
                         </div>
                     )}
                 </div>
+=======
+                <PlaylistComponent 
+                    name={playlist.name} 
+                    description={playlist.description} 
+                    imageUrl={playlist.imageUrl} 
+                    songs={songs} 
+                />
+                {isOwner && <EditPlaylist playlistID={playlist.playlistID} name={playlist.name} description={playlist.description} />}
+                <ListComments comments={playlist.comments} />
+                {isOwner && <EditComment />}
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
             </div>
         );
     }

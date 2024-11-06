@@ -1,12 +1,21 @@
 import React from 'react';
+<<<<<<< HEAD
 import { useParams } from 'react-router-dom';
+=======
+import { useParams} from 'react-router-dom';
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
 import Header from "../components/Header.js";
 import ProfileComponent from '../components/ProfileComponent.js';
 import Followers from '../components/Followers.js';
 import Following from '../components/Following.js';
 import EditProfile from '../components/EditProfile.js';
+<<<<<<< HEAD
 import { getCookie, deleteCookie } from '../utils/cookie';
 import '../../public/assets/css/Profile.css';
+=======
+import CreatePlaylist from '../components/CreatePlaylist.js';
+import { getCookie, deleteCookie } from '../utils/cookie';
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
 
 class Profile extends React.Component {
     constructor(props) {
@@ -16,10 +25,14 @@ class Profile extends React.Component {
             playlists: [],
             followers: [],
             following: [],
+<<<<<<< HEAD
             friendRequests: [],
             loggedInUserId: null,
             isFriend: false,
             friendRequestSent: false,
+=======
+            loggedInUserId: null,
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
         };
     }
 
@@ -31,7 +44,10 @@ class Profile extends React.Component {
         await this.fetchPlaylists(id);
         await this.fetchFollowers(id);
         await this.fetchFollowing(id);
+<<<<<<< HEAD
         await this.fetchFriendRequests(loggedInUserId);
+=======
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
     }
 
     fetchUser = async (id) => {
@@ -43,7 +59,11 @@ class Profile extends React.Component {
             const data = await response.json();
             this.setState({ user: data });
         } catch (error) {
+<<<<<<< HEAD
             console.log("Error fetching user:", error);
+=======
+            console.log("Error fetching user data:", error);
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
         }
     };
 
@@ -86,6 +106,7 @@ class Profile extends React.Component {
         }
     };
 
+<<<<<<< HEAD
     fetchFriendRequests = async (id) => {
         try {
             const response = await fetch(`/api/users/${id}/friend-requests`);
@@ -184,6 +205,8 @@ class Profile extends React.Component {
         }
     };
 
+=======
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
     handleDeleteAccount = async () => {
         const { user, loggedInUserId } = this.state;
         if (user._id !== loggedInUserId) {
@@ -211,7 +234,11 @@ class Profile extends React.Component {
     };
 
     render() {
+<<<<<<< HEAD
         const { user, playlists, followers, following, friendRequests, loggedInUserId, isFriend, friendRequestSent } = this.state;
+=======
+        const { user, playlists, followers, following, loggedInUserId } = this.state;
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
 
         if (!user) {
             return <div>Loading...</div>;
@@ -220,11 +247,16 @@ class Profile extends React.Component {
         const isOwnProfile = user._id === loggedInUserId;
 
         return (
+<<<<<<< HEAD
             <div className="profile-container">
+=======
+            <div>
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
                 <header className="top-0 w-full p-4 flex justify-center z-10">
                     <h1 className="text-8xl">Allegro</h1>
                 </header>
                 <Header />
+<<<<<<< HEAD
 
                 {/* Display name and profile picture only if not friends */}
                 {!isFriend && !isOwnProfile && (
@@ -291,6 +323,20 @@ class Profile extends React.Component {
                         </ul>
                     </div>
                 )}
+=======
+                <ProfileComponent 
+                    userId={user._id}
+                    username={user.username} 
+                    description={user.description} 
+                    imageUrl={user.imageUrl} 
+                    playlists={playlists} 
+                />
+                <Followers userId={user._id} />
+                <Following userId={user._id} />
+                {isOwnProfile && <EditProfile username={user.username} description={user.description} />}
+                {isOwnProfile && <CreatePlaylist />}
+                {isOwnProfile && <button onClick={this.handleDeleteAccount}>Delete account</button>}
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
             </div>
         );
     }

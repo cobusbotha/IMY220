@@ -1,6 +1,9 @@
 import React from "react";
 import { setCookie, getCookie, deleteCookie } from '../utils/cookie';
+<<<<<<< HEAD
 import '../../public/assets/css/Login.css';
+=======
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
 
 class Login extends React.Component {
     constructor(props) {
@@ -50,10 +53,15 @@ class Login extends React.Component {
                 });
 
                 if (response.ok) {
+<<<<<<< HEAD
                     console.log("Login successful");
                     const data = await response.json();
                     setCookie('userId', data.userId, 1); 
                     console.log("userId set in cookie:", getCookie('userId'));
+=======
+                    const data = await response.json();
+                    setCookie('userId', data.userId, 1); 
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
                     window.location.href = '/home'; 
                 } else {
                     alert("Login failed");
@@ -71,9 +79,15 @@ class Login extends React.Component {
 
     render() {
         return (
+<<<<<<< HEAD
             <form onSubmit={this.handleSubmit} className="login-form">
                 <div className="form-group">
                     <label htmlFor="emailLogin">Email</label>
+=======
+            <form onSubmit={this.handleSubmit} className="bg-primary rounded-lg p-8 flex flex-col space-y-4 w-full max-w-md mx-auto">
+                <div className="flex flex-col">
+                    <label htmlFor="emailLogin" className="text-white mb-2">Email</label>
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
                     <input
                         type="text"
                         placeholder="Email"
@@ -81,6 +95,7 @@ class Login extends React.Component {
                         name="email"
                         value={this.state.email}
                         onChange={this.handleChange}
+<<<<<<< HEAD
                         autoComplete="email"
                         className="form-control"
                     />
@@ -88,6 +103,14 @@ class Login extends React.Component {
                 </div>
                 <div className="form-group">
                     <label htmlFor="passwordLogin">Password</label>
+=======
+                        className="p-2 rounded border border-gray-300"
+                    />
+                    {this.state.problems.email && <span className="text-red-500 mt-1">{this.state.problems.email}</span>}
+                </div>
+                <div className="flex flex-col">
+                    <label htmlFor="passwordLogin" className="text-white mb-2">Password</label>
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
                     <input
                         type="password"
                         placeholder="Password"
@@ -95,12 +118,20 @@ class Login extends React.Component {
                         name="password"
                         value={this.state.password}
                         onChange={this.handleChange}
+<<<<<<< HEAD
                         autoComplete="current-password"
                         className="form-control"
                     />
                     {this.state.problems.password && <span className="error">{this.state.problems.password}</span>}
                 </div>
                 <button type="submit" className="btn">
+=======
+                        className="p-2 rounded border border-gray-300"
+                    />
+                    {this.state.problems.password && <span className="text-red-500 mt-1">{this.state.problems.password}</span>}
+                </div>
+                <button type="submit" className="bg-white text-secondary py-2 px-4 rounded hover:bg-gray-200 transition duration-300">
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
                     Login
                 </button>
             </form>

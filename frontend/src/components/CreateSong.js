@@ -1,5 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
 import '../../public/assets/css/CreateSong.css';
+=======
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
 
 class CreateSong extends React.Component {
     constructor(props) {
@@ -48,8 +51,13 @@ class CreateSong extends React.Component {
 
         return (
             <div>
+<<<<<<< HEAD
                 <h2 id="create-song">Add Song</h2>
                 <form onSubmit={this.handleSubmit} className="create-song-form">
+=======
+                <h2>Create a New Song</h2>
+                <form onSubmit={this.handleSubmit}>
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
                     <div>
                         <label>Title:</label>
                         <input

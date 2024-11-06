@@ -1,6 +1,9 @@
 import React from "react";
 import ProfilePreview from "./ProfilePreview";
+<<<<<<< HEAD
 import '../../public/assets/css/Followers.css';
+=======
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
 
 class Followers extends React.Component {
     state = {
@@ -38,11 +41,19 @@ class Followers extends React.Component {
     render() {
         const { followers } = this.state;
         return (
+<<<<<<< HEAD
             <div className="followers-container">
                 <h3>Followers</h3>
                 {followers.length > 0 ? (
                     followers.map((follower, index) => (
                         <div key={index} className="follower-item">
+=======
+            <div>
+                <h3>Followers</h3>
+                {followers.length > 0 ? (
+                    followers.map((follower, index) => (
+                        <div key={index}>
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
                             <ProfilePreview image={follower.imageUrl} username={follower.username} />
                         </div>
                     ))

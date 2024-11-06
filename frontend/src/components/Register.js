@@ -1,5 +1,8 @@
 import React from "react";
+<<<<<<< HEAD
 import '../../public/assets/css/Register.css';
+=======
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
 
 class Register extends React.Component {
     constructor(props) {
@@ -8,8 +11,12 @@ class Register extends React.Component {
             username: '',
             password: '',
             email: '',
+<<<<<<< HEAD
             problems: {},
             successMessage: ''
+=======
+            problems: {}
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
         };
     }
 
@@ -56,6 +63,7 @@ class Register extends React.Component {
                         email: this.state.email
                     })
                 });
+<<<<<<< HEAD
     
                 if (response.ok) {
                     this.setState({
@@ -66,11 +74,18 @@ class Register extends React.Component {
                 } else {
                     const errorData = await response.json();
                     console.log('Registration failed', errorData);
+=======
+                if (response.ok) {
+                    console.log('User registered successfully');
+                } else {
+                    console.log('Registration failed');
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
                 }
             } catch (error) {
                 console.error('Error:', error);
             }
         } else {
+<<<<<<< HEAD
             console.log(this.state.problems);
         }
     };      
@@ -80,6 +95,20 @@ class Register extends React.Component {
             <form onSubmit={this.handleSubmit} className="register-form">
                 <div className="form-group">
                     <label htmlFor="usernameRegister">Username</label>
+=======
+            this.setState((prevState) => {
+                console.log(prevState.problems);
+                return prevState;
+            });
+        }
+    };
+
+    render() {
+        return (
+            <form onSubmit={this.handleSubmit} className="bg-primary rounded-lg p-8 flex flex-col space-y-4 w-full max-w-md mx-auto">
+                <div className="flex flex-col">
+                    <label htmlFor="usernameRegister" className="text-white mb-2">Username</label>
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
                     <input
                         type="text"
                         placeholder="Username"
@@ -87,6 +116,7 @@ class Register extends React.Component {
                         name="username"
                         value={this.state.username}
                         onChange={this.handleChange}
+<<<<<<< HEAD
                         autoComplete="username"
                         className="form-control"
                     />
@@ -94,6 +124,14 @@ class Register extends React.Component {
                 </div>
                 <div className="form-group">
                     <label htmlFor="passwordRegister">Password</label>
+=======
+                        className="p-2 rounded border border-gray-300"
+                    />
+                    {this.state.problems.username && <span className="text-red-500 mt-1">{this.state.problems.username}</span>}
+                </div>
+                <div className="flex flex-col">
+                    <label htmlFor="passwordRegister" className="text-white mb-2">Password</label>
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
                     <input
                         type="password"
                         placeholder="Password"
@@ -101,6 +139,7 @@ class Register extends React.Component {
                         name="password"
                         value={this.state.password}
                         onChange={this.handleChange}
+<<<<<<< HEAD
                         autoComplete="new-password"
                         className="form-control"
                     />
@@ -108,6 +147,14 @@ class Register extends React.Component {
                 </div>
                 <div className="form-group">
                     <label htmlFor="emailRegister">Email</label>
+=======
+                        className="p-2 rounded border border-gray-300"
+                    />
+                    {this.state.problems.password && <span className="text-red-500 mt-1">{this.state.problems.password}</span>}
+                </div>
+                <div className="flex flex-col">
+                    <label htmlFor="emailRegister" className="text-white mb-2">Email</label>
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
                     <input
                         type="email"
                         placeholder="Email"
@@ -115,6 +162,7 @@ class Register extends React.Component {
                         name="email"
                         value={this.state.email}
                         onChange={this.handleChange}
+<<<<<<< HEAD
                         autoComplete="email"
                         className="form-control"
                     />
@@ -129,6 +177,18 @@ class Register extends React.Component {
             </form>
         );
     }    
+=======
+                        className="p-2 rounded border border-gray-300"
+                    />
+                    {this.state.problems.email && <span className="text-red-500 mt-1">{this.state.problems.email}</span>}
+                </div>
+                <button type="submit" className="bg-white text-secondary py-2 px-4 rounded hover:bg-gray-200 transition duration-300">
+                    Register
+                </button>
+            </form>
+        );
+    }
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
 }
 
 export default Register;

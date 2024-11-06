@@ -1,6 +1,9 @@
 import React from "react";
 import { getCookie } from '../utils/cookie';
+<<<<<<< HEAD
 import '../../public/assets/css/Song.css';
+=======
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
 
 class Song extends React.Component {
     constructor(props) {
@@ -100,8 +103,13 @@ class Song extends React.Component {
         const embedUrl = `https://open.spotify.com/embed/track/${trackId}`;
 
         return (
+<<<<<<< HEAD
             <div className="song">
                 <h3>{title}</h3>
+=======
+            <div className="border border-black p-4 rounded-lg bg-primary shadow-md text-secondary">
+                <h3 className="text-xl font-semibold mb-2">{title}</h3>
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
                 {trackId ? (
                     <iframe
                         src={embedUrl}
@@ -109,6 +117,10 @@ class Song extends React.Component {
                         height="80"
                         allowtransparency="true"
                         allow="encrypted-media"
+<<<<<<< HEAD
+=======
+                        className="mb-4"
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
                     ></iframe>
                 ) : (
                     <p>Invalid track link</p>
@@ -116,6 +128,10 @@ class Song extends React.Component {
                 <select
                     value={selectedPlaylistId}
                     onChange={this.handleChange}
+<<<<<<< HEAD
+=======
+                    className="w-full p-2 mb-4 border border-gray-300 rounded text-black"
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
                 >
                     <option value="" disabled>Select a playlist</option>
                     {playlists.map((playlist) => (
@@ -126,17 +142,29 @@ class Song extends React.Component {
                 </select>
                 <button
                     onClick={this.handleAddToPlaylist}
+<<<<<<< HEAD
+=======
+                    className="bg-secondary text-primary py-2 px-4 rounded mr-2 hover:bg-gray-200 transition duration-300"
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
                 >
                     Add to playlist
                 </button>
                 <button
                     onClick={this.handleDeleteSong}
+<<<<<<< HEAD
                     className="delete-button"
+=======
+                    className="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-700"
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
                 >
                     Delete song
                 </button>
                 {selectedPlaylistName && (
+<<<<<<< HEAD
                     <p>Selected Playlist: {selectedPlaylistName}</p>
+=======
+                    <p className="mt-4 italic">Selected Playlist: {selectedPlaylistName}</p>
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
                 )}
             </div>
         );

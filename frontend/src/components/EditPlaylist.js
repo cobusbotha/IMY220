@@ -1,6 +1,9 @@
 import React from "react";
 import { getCookie } from '../utils/cookie';
+<<<<<<< HEAD
 import '../../public/assets/css/EditPlaylist.css';
+=======
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
 
 class EditPlaylist extends React.Component {
     constructor(props) {
@@ -26,7 +29,11 @@ class EditPlaylist extends React.Component {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
+<<<<<<< HEAD
                 'user-id': userID
+=======
+                'user-id': userID // Send user ID in headers
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
             },
             body: JSON.stringify({ name, description })
         })
@@ -47,7 +54,11 @@ class EditPlaylist extends React.Component {
     render() {
         const { name, description } = this.state;
         return (
+<<<<<<< HEAD
             <form onSubmit={this.handleSubmit} className="edit-playlist-form">
+=======
+            <form onSubmit={this.handleSubmit}>
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
                 <label htmlFor="name">Edit playlist name</label>
                 <input 
                     type="text" 
@@ -55,6 +66,10 @@ class EditPlaylist extends React.Component {
                     value={name} 
                     onChange={this.handleInputChange} 
                 />
+<<<<<<< HEAD
+=======
+                <br/>
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
                 <label htmlFor="description">Edit description</label>
                 <input 
                     type="text" 
@@ -62,6 +77,10 @@ class EditPlaylist extends React.Component {
                     value={description} 
                     onChange={this.handleInputChange} 
                 />
+<<<<<<< HEAD
+=======
+                <br/>
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
                 <button type="submit">Edit Playlist</button>
             </form>
         );

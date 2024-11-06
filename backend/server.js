@@ -1,4 +1,5 @@
 const express = require('express');
+<<<<<<< HEAD
 const { MongoClient, ObjectId } = require('mongodb');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
@@ -6,6 +7,12 @@ const cookieParser = require('cookie-parser');
 const multer = require('multer');
 const fs = require('fs'); 
 const path = require('path');
+=======
+const { MongoClient } = require('mongodb');
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const cookieParser = require('cookie-parser');
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
 require('dotenv').config(); 
 
 const url = `mongodb+srv://${process.env.MONGODBUSERNAME}:${encodeURIComponent(process.env.MONGODBPASSWORD)}@imy220.p46ps.mongodb.net/?retryWrites=true&w=majority&appName=IMY220`;
@@ -14,6 +21,7 @@ const client = new MongoClient(url);
 const app = express();
 app.use(express.json()); 
 app.use(cookieParser()); 
+<<<<<<< HEAD
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 const uploadPath = path.join(__dirname, 'uploads');
@@ -31,17 +39,24 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage });
+=======
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
 
 app.use(express.static('./frontend/public'));
 
 async function startServer() {
     await client.connect();
     
+<<<<<<< HEAD
+=======
+
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
     const db = client.db('IMY220-Project');
     const SongCollection = db.collection('songs');
     const PlaylistCollection = db.collection('playlists');
     const UserCollection = db.collection('users');
 
+<<<<<<< HEAD
     // await UserCollection.updateMany(
     //     { friendRequests: { $exists: false } },
     //     { $set: { friendRequests: [] } }
@@ -64,6 +79,8 @@ async function startServer() {
     
     // addSavedPlaylistsFieldToUsers();    
 
+=======
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
     app.get('/api/songs', async (req, res) => {
         try {
             const songs = await SongCollection.find().sort({ dateAdded: -1 }).toArray();
@@ -75,12 +92,16 @@ async function startServer() {
 
     app.get('/api/users/:id', async (req, res) => {
         const { id } = req.params;
+<<<<<<< HEAD
         const loggedInUserId = req.headers['user-id'];
+=======
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
         try {
             const user = await UserCollection.findOne({ _id: id });
             if (!user) {
                 return res.status(404).json({ error: 'User not found' });
             }
+<<<<<<< HEAD
             const isFriend = user.followerIDs.includes(loggedInUserId);
             if (!isFriend) {
                 return res.status(200).json({
@@ -89,6 +110,8 @@ async function startServer() {
                     imageUrl: user.imageUrl
                 });
             }
+=======
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
             res.status(200).json(user);
         } catch (err) {
             res.status(500).json({ error: err.message });
@@ -152,6 +175,7 @@ async function startServer() {
     app.post('/api/register', async (req, res) => {
         const { username, password, email } = req.body;
         try {
+<<<<<<< HEAD
             const existingUser = await UserCollection.findOne({ email });
             if (existingUser) {
                 return res.status(400).json({ message: 'Email already in use' });
@@ -173,21 +197,38 @@ async function startServer() {
                 _id: customId,
                 description: '', 
                 imageUrl: '/assets/images/placeholder.webp', 
+=======
+            const count = await UserCollection.countDocuments();
+            const newId = `user0${count + 1}`;
+    
+            const hashedPassword = await bcrypt.hash(password, 10);
+    
+            const newUser = {
+                _id: newId.toString(), 
+                description: '', 
+                imageUrl: '/assets/images/placeholder.png', 
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
                 username, 
                 email,
                 password: hashedPassword, 
                 playlistIDs: [],
                 followerIDs: [],
+<<<<<<< HEAD
                 followingIDs: [],
                 friendRequests: [],
                 savedPlaylists: []
             };
             
+=======
+                followingIDs: []
+            };
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
             await UserCollection.insertOne(newUser);
             res.status(201).send("User registered successfully");
         } catch (err) {
             res.status(500).send(err);
         }
+<<<<<<< HEAD
     });    
 
     app.get('/api/users/:id/friend-requests', async (req, res) => {
@@ -304,6 +345,10 @@ async function startServer() {
         }
     });    
 
+=======
+    });
+    
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
     app.post("/api/login", async (req, res) => {
         try {
             const { email, password } = req.body;
@@ -352,6 +397,7 @@ async function startServer() {
         }
     });
 
+<<<<<<< HEAD
     app.delete('/api/playlists/:playlistId', async (req, res) => {
         const { playlistId } = req.params;
         const userId = req.headers['user-id'];
@@ -381,6 +427,8 @@ async function startServer() {
         }
     });    
 
+=======
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
     app.get('/api/user/:userId/following/playlists', async (req, res) => {
         try {
             const userId = req.params.userId;
@@ -430,6 +478,7 @@ async function startServer() {
         }
     });
 
+<<<<<<< HEAD
     app.put('/api/users/:id', upload.single('image'), async (req, res) => {
         const { id } = req.params;
         const { username, description } = req.body;
@@ -469,6 +518,24 @@ async function startServer() {
         }
     });
     
+=======
+    app.put('/api/users/:id', async (req, res) => {
+        const { id } = req.params;
+        const { username, description } = req.body;
+        try {
+            const result = await UserCollection.updateOne(
+                { _id: id },
+                { $set: { username, description } }
+            );
+            if (result.matchedCount === 0) {
+                return res.status(404).json({message: "User not found" });
+            }
+            res.status(200).json({ message: "Profile updated successfully" });
+        } catch (err) {
+            res.status(500).json({ error: err.message });
+        }
+    });
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
 
     app.put('/api/playlist/:id', async (req, res) => {
         const { id } = req.params;
@@ -500,6 +567,7 @@ async function startServer() {
         }
     });
 
+<<<<<<< HEAD
     app.post('/api/createplaylist', upload.single('image'), async (req, res) => {
         const { name, description } = req.body;
         const userId = req.headers['user-id'];
@@ -543,15 +611,58 @@ async function startServer() {
             res.status(500).json({ error: error.message });
         }
     });            
+=======
+    app.put('/api/:id/createplaylist', async (req, res) => {
+        const { id } = req.params;
+        const { name, description } = req.body;
+
+        try {
+            const user = await UserCollection.findOne({ _id: id });
+            if (!user) {
+               return res.status(404).json ({ message: "User not found" });
+            }
+
+            const count = await PlaylistCollection.countDocuments();
+            const newId = `PL0${count + 1}`;
+
+            const newPlaylist = {
+                playlistID: newId.toString(),
+                name,
+                description, 
+                imageUrl: '/assets/images/placeholder.png', 
+                comments: [],
+                userIDs: [
+                    id
+                ],
+                songIDs: [] };
+
+            await PlaylistCollection.insertOne(newPlaylist);
+
+            await UserCollection.updateOne(
+                { _id: id },
+                { $push: { playlistIDs: newId.toString() } }
+            );
+
+            res.status(201).send("Playlist created successfully");
+        } catch (error) {
+            res.status(500).json({ error: error.message });
+        }
+    });
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
 
     app.delete('/api/playlists/:playlistId/remove', async (req, res) => {
         const { playlistId } = req.params;
         const loggedInUserId = req.headers['user-id'];
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
         try {
             const playlist = await PlaylistCollection.findOne({ playlistID: playlistId });
             if (!playlist) {
                 return res.status(404).json({ message: "Playlist not found" });
             }
+<<<<<<< HEAD
             const user = await UserCollection.findOne({ _id: loggedInUserId, savedPlaylists: playlistId });
             if (!user) {
                 return res.status(403).json({ message: "Playlist is not saved in the user's library" });
@@ -559,13 +670,27 @@ async function startServer() {
             await UserCollection.updateOne(
                 { _id: loggedInUserId },
                 { $pull: { savedPlaylists: playlistId } }
+=======
+    
+            if (!playlist.userIDs.includes(loggedInUserId)) {
+                return res.status(403).json({ message: "You do not have this playlist in your library" });
+            }
+    
+            await UserCollection.updateOne(
+                { _id: loggedInUserId },
+                { $pull: { playlistIDs: playlistId } }
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
             );
     
             res.status(200).json({ message: "Playlist removed from user library successfully" });
         } catch (error) {
             res.status(500).json({ error: error.message });
         }
+<<<<<<< HEAD
     });    
+=======
+    });
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
 
     app.post('/api/playlists/:playlistId/add', async (req, res) => {
         const { playlistId } = req.params;
@@ -601,6 +726,7 @@ async function startServer() {
         }
     
         try {
+<<<<<<< HEAD
             let customId;
             let isUnique = false;
             while (!isUnique) {
@@ -613,6 +739,12 @@ async function startServer() {
 
             const newSong = {
                 songID: customId,
+=======
+            const songID = generateSongID(title);
+    
+            const newSong = {
+                songID,
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
                 title,
                 link,
                 playlistIDs: [],
@@ -653,6 +785,7 @@ async function startServer() {
         }
     });
 
+<<<<<<< HEAD
     app.get('/api/user/:userId/playlists', async (req, res) => {
         const { userId } = req.params;
     
@@ -700,10 +833,15 @@ async function startServer() {
     app.get('/api/search', async (req, res) => {
         const { term, type } = req.query;
         const loggedInUserId = req.headers['user-id'];
+=======
+    app.get('/api/search', async (req, res) => {
+        const { term, type } = req.query;
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
     
         try {
             let results;
             switch (type) {
+<<<<<<< HEAD
                 case 'users':
                     results = await UserCollection.find({
                         username: { $regex: term, $options: 'i' }
@@ -716,12 +854,20 @@ async function startServer() {
                     }));
                     console.log("Search results with follow flags:", results);
                     break;
+=======
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
                 case 'playlists':
                     results = await PlaylistCollection.find({ name: { $regex: term, $options: 'i' } }).toArray();
                     break;
                 case 'songs':
                     results = await SongCollection.find({ title: { $regex: term, $options: 'i' } }).toArray();
                     break;
+<<<<<<< HEAD
+=======
+                case 'users':
+                    results = await UserCollection.find({ username: { $regex: term, $options: 'i' } }).toArray();
+                    break;
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
                 default:
                     return res.status(400).json({ message: 'Invalid search type' });
             }
@@ -730,6 +876,7 @@ async function startServer() {
             console.error('Error searching:', error);
             res.status(500).json({ message: 'Internal server error' });
         }
+<<<<<<< HEAD
     });  
 
     app.post('/api/playlist/:playlistId/comment', async (req, res) => {
@@ -790,6 +937,9 @@ async function startServer() {
             res.status(500).json({ message: 'Server error', error: error.message });
         }
     });    
+=======
+    });
+>>>>>>> 204efbb1852ba6fca94daa06dbf378111b31df94
 
     app.get('*', (req, res) => {
         res.sendFile('index.html', { root: './frontend/public' });
