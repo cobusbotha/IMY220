@@ -1,0 +1,12 @@
+GitHub:
+https://github.com/cobusbotha/IMY220/tree/D2
+
+MongoDB:
+
+u23556502
+vD8wimIqSRIHq4KV
+
+mongodb+srv://u23556502:vD8wimIqSRIHq4KV@imy220.p46ps.mongodb.net/?retryWrites=true&w=majority&appName=IMY220
+
+Docker:
+docker-compose up --build

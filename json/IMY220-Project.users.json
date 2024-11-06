@@ -1,0 +1,234 @@
+[{
+  "_id": "user7273",
+  "description": "undefined",
+  "imageUrl": "/uploads/1730696895706-cobus.gif",
+  "username": "cobusbotha",
+  "email": "cobus.b31@gmail.com",
+  "password": "$2a$10$oj9txQxYpAByBzGkLxxWKe/I5o0I3XAPR9ZqiUVxY1SghV53g6mAC",
+  "playlistIDs": [
+    "PL1397",
+    "PL5970",
+    "PL4987",
+    "PL54"
+  ],
+  "followerIDs": [
+    "user4606",
+    "user974",
+    "user7528",
+    "user24",
+    "user6836"
+  ],
+  "followingIDs": [
+    "user4606",
+    "user974",
+    "user24",
+    "user7528",
+    "user6836"
+  ],
+  "friendRequests": [],
+  "friendRequestsSent": [
+    "user6836",
+    "user7528",
+    "user4144",
+    "user3564"
+  ],
+  "savedPlaylists": [
+    "PL6736",
+    "PL4259"
+  ]
+},
+{
+  "_id": "user974",
+  "description": "",
+  "imageUrl": "/uploads/1730666143415-profile.webp",
+  "username": "dharmabotha",
+  "email": "dharma22@gmail.com",
+  "password": "$2a$10$MOymRMCmyFYwHl0Ys1p1te.fLiwZIEcXisWYPHX3xOaJzBBGF117m",
+  "playlistIDs": [
+    "PL6736",
+    "PL1420"
+  ],
+  "followerIDs": [
+    "user7273",
+    "user24",
+    "user4606",
+    "user6836"
+  ],
+  "followingIDs": [
+    "user7273",
+    "user24",
+    "user4606",
+    "user6836"
+  ],
+  "friendRequests": [],
+  "savedPlaylists": [
+    "PL6802",
+    "PL195",
+    "PL5115",
+    "PL5970"
+  ]
+},
+{
+  "_id": "user7528",
+  "description": "",
+  "imageUrl": "/assets/images/profile.webp",
+  "username": "daniebotha",
+  "email": "danie@wvw.co.za",
+  "password": "$2a$10$jy3x92oVFe2f1CltxAfHk.2Pf4qQ2X8nuRXMVKRYtPR5LjCEyLr8W",
+  "playlistIDs": [
+    "PL6524",
+    "PL7439"
+  ],
+  "followerIDs": [
+    "user7273"
+  ],
+  "followingIDs": [
+    "user7273"
+  ],
+  "friendRequests": [
+    "user4606"
+  ],
+  "savedPlaylists": []
+},
+{
+  "_id": "user4606",
+  "description": "",
+  "imageUrl": "/assets/images/profile.webp",
+  "username": "charmabotha",
+  "email": "charma@wvw.co.za",
+  "password": "$2a$10$OWTiISdwXvJJTxMs2YQJXe75sMXiPXdMOxyzPBFaN0Q2Mxfz.s.D6",
+  "playlistIDs": [
+    "PL2193",
+    "PL6419",
+    "PL4259"
+  ],
+  "followerIDs": [
+    "user7273",
+    "user974"
+  ],
+  "followingIDs": [
+    "user7273",
+    "user974"
+  ],
+  "friendRequests": [],
+  "savedPlaylists": [
+    "PL6736"
+  ],
+  "friendRequestsSent": [
+    "user974",
+    "user7528"
+  ]
+},
+{
+  "_id": "user24",
+  "description": "",
+  "imageUrl": "/assets/images/profile.webp",
+  "username": "hanckocloete",
+  "email": "Hancko06@gmail.com",
+  "password": "$2a$10$Hw0cfLz8zYMRqNTc/C7kguBrKIQ/nApy9ZTObSCJd3P7BPv0BAmiO",
+  "playlistIDs": [],
+  "followerIDs": [
+    "user7273",
+    "user974"
+  ],
+  "followingIDs": [
+    "user7273",
+    "user974"
+  ],
+  "friendRequests": [],
+  "savedPlaylists": []
+},
+{
+  "_id": "user9339",
+  "description": "",
+  "imageUrl": "/assets/images/profile.webp",
+  "username": "joshdt",
+  "email": "joshdt@gmail.com",
+  "password": "$2a$10$.LE8c4s8b.eXBDBDIlS80OWxb.XeFiBarC.04uYEHgmLtCfGpJjDK",
+  "playlistIDs": [],
+  "followerIDs": [],
+  "followingIDs": [],
+  "friendRequests": [],
+  "friendRequestsSent": [
+    "user7273"
+  ],
+  "savedPlaylists": []
+},
+{
+  "_id": "user4144",
+  "description": "",
+  "imageUrl": "/assets/images/profile.webp",
+  "username": "marinusfaling",
+  "email": "marinus@gmail.com",
+  "password": "$2a$10$pRpPNGtc0B1vRikSvStlW.LO9t/civ8fPN.Ii0b7BEerMQidO0x0m",
+  "playlistIDs": [],
+  "followerIDs": [],
+  "followingIDs": [],
+  "friendRequests": [
+    "user7273"
+  ],
+  "savedPlaylists": []
+},
+{
+  "_id": "user3564",
+  "description": "",
+  "imageUrl": "/assets/images/profile.webp",
+  "username": "liamcloete",
+  "email": "liam@gmail.com",
+  "password": "$2a$10$4hQScli4PjGqLwv/tYYfbOCUWsVTjWSAlfsN8xmbQj897/0Bajzmq",
+  "playlistIDs": [],
+  "followerIDs": [],
+  "followingIDs": [],
+  "friendRequests": [
+    "user7273"
+  ],
+  "savedPlaylists": []
+},
+{
+  "_id": "user1745",
+  "description": "",
+  "imageUrl": "/assets/images/profile.webp",
+  "username": "stephanvdw",
+  "email": "stephan@eng.co.za",
+  "password": "$2a$10$844hI.nM7AS/J4jk4zo3RurKNV50jLOnGbxV.Gh0n/FCwlidX5JCK",
+  "playlistIDs": [],
+  "followerIDs": [],
+  "followingIDs": [],
+  "friendRequests": [],
+  "savedPlaylists": []
+},
+{
+  "_id": "user9975",
+  "description": "",
+  "imageUrl": "/assets/images/profile.webp",
+  "username": "divanvdm",
+  "email": "divanvdm@gmail.com",
+  "password": "$2a$10$E7ZWMMiaXv3gIO.pdzwYaulROlr.iLchyI3SJQxtOnafjD4vXjj8u",
+  "playlistIDs": [],
+  "followerIDs": [],
+  "followingIDs": [],
+  "friendRequests": [],
+  "savedPlaylists": []
+},
+{
+  "_id": "user6836",
+  "description": "",
+  "imageUrl": "/assets/images/profile.webp",
+  "username": "andrevgraan",
+  "email": "andre@gmail.com",
+  "password": "$2a$10$4tMsM/TtvgYV0z.Efr2nIOiq4CTgJfoGmvufa0upE1.vraWN9mnle",
+  "playlistIDs": [],
+  "followerIDs": [
+    "user7273",
+    "user974"
+  ],
+  "followingIDs": [
+    "user7273",
+    "user974"
+  ],
+  "friendRequests": [],
+  "savedPlaylists": [],
+  "friendRequestsSent": [
+    "user974"
+  ]
+}]

@@ -1,0 +1,216 @@
+[{
+  "_id": {
+    "$oid": "6728bdcada3ea524ef6a41a7"
+  },
+  "playlistID": "PL6736",
+  "name": "Dharmas Hits",
+  "description": "Compilation of my favorites",
+  "imageUrl": "/uploads/1730723274872-Photoshop-2.JPG",
+  "comments": [
+    {
+      "author": "cobusbotha",
+      "comment": "Wonderful",
+      "date": {
+        "$date": "2024-11-04T12:43:42.047Z"
+      }
+    },
+    {
+      "author": "charmabotha",
+      "comment": "Love it!",
+      "date": {
+        "$date": "2024-11-04T12:50:56.221Z"
+      }
+    }
+  ],
+  "userIDs": [
+    "user974"
+  ],
+  "songIDs": [
+    "boaf"
+  ],
+  "dateCreated": {
+    "$date": "2024-11-04T12:27:54.922Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6728befd201d9a25ca90048d"
+  },
+  "playlistID": "PL5970",
+  "name": "My favs",
+  "description": "Compilation of Cobus' favorites song",
+  "imageUrl": "/uploads/1730723581908-cobus.gif",
+  "comments": [],
+  "userIDs": [
+    "user7273"
+  ],
+  "songIDs": [
+    "c"
+  ],
+  "dateCreated": {
+    "$date": "2024-11-04T12:33:01.970Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6728e0a19f6e6ce00fbf6017"
+  },
+  "playlistID": "PL4987",
+  "name": "Late night drives",
+  "description": "Songs for the car",
+  "imageUrl": "/uploads/1730732193024-CachedBmp_29.png",
+  "comments": [],
+  "userIDs": [
+    "user7273"
+  ],
+  "songIDs": [],
+  "dateCreated": {
+    "$date": "2024-11-04T14:56:33.084Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6728e0ed9f6e6ce00fbf6018"
+  },
+  "playlistID": "PL54",
+  "name": "Academic weapon",
+  "description": "Songs for crunch times",
+  "imageUrl": "/uploads/1730732269487-Comic_atlas_4.png",
+  "comments": [
+    {
+      "author": "cobusbotha",
+      "comment": "Hi",
+      "date": {
+        "$date": "2024-11-04T17:09:04.234Z"
+      }
+    }
+  ],
+  "userIDs": [
+    "user7273"
+  ],
+  "songIDs": [
+    "lih"
+  ],
+  "dateCreated": {
+    "$date": "2024-11-04T14:57:49.576Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6728f11c5aaf0012cb18346e"
+  },
+  "playlistID": "PL1420",
+  "name": "Songs to test to",
+  "description": "Song I listen when testing things",
+  "imageUrl": "/assets/images/placeholder.png",
+  "comments": [],
+  "userIDs": [
+    "user974"
+  ],
+  "songIDs": [
+    "sya",
+    "lc"
+  ],
+  "dateCreated": {
+    "$date": "2024-11-04T16:06:52.331Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6728f15e5aaf0012cb18346f"
+  },
+  "playlistID": "PL6524",
+  "name": "Songs that I cry to",
+  "description": "For when I am in that mood",
+  "imageUrl": "/uploads/1730736478234-Comic_atlas_1.png",
+  "comments": [],
+  "userIDs": [
+    "user7528"
+  ],
+  "songIDs": [
+    "soml"
+  ],
+  "dateCreated": {
+    "$date": "2024-11-04T16:07:58.295Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6728f17d5aaf0012cb183470"
+  },
+  "playlistID": "PL7439",
+  "name": "Songs I jam to",
+  "description": "I mean, c'mon",
+  "imageUrl": "/assets/images/placeholder.png",
+  "comments": [],
+  "userIDs": [
+    "user7528"
+  ],
+  "songIDs": [
+    "c",
+    "bac"
+  ],
+  "dateCreated": {
+    "$date": "2024-11-04T16:08:29.682Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6728f9cca331ab04dc60d481"
+  },
+  "playlistID": "PL2193",
+  "name": "I putt",
+  "description": "For the golf cart",
+  "imageUrl": "/assets/images/placeholder.png",
+  "comments": [],
+  "userIDs": [
+    "user4606"
+  ],
+  "songIDs": [
+    "lc",
+    "sya"
+  ],
+  "dateCreated": {
+    "$date": "2024-11-04T16:43:56.449Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6728f9dca331ab04dc60d482"
+  },
+  "playlistID": "PL6419",
+  "name": "Workout beats",
+  "description": "Beats for my pump",
+  "imageUrl": "/assets/images/placeholder.png",
+  "comments": [],
+  "userIDs": [
+    "user4606"
+  ],
+  "songIDs": [
+    "sw",
+    "boaf"
+  ],
+  "dateCreated": {
+    "$date": "2024-11-04T16:44:12.543Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6728f9f5a331ab04dc60d483"
+  },
+  "playlistID": "PL4259",
+  "name": "The End",
+  "description": "For when things come to an end",
+  "imageUrl": "/assets/images/placeholder.png",
+  "comments": [],
+  "userIDs": [
+    "user4606"
+  ],
+  "songIDs": [
+    "iwby",
+    "soml"
+  ],
+  "dateCreated": {
+    "$date": "2024-11-04T16:44:37.970Z"
+  }
+}]

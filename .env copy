@@ -1,0 +1,5 @@
+MONGODBUSERNAME="u23556502"
+MONGODBPASSWORD="vD8wimIqSRIHq4KV"
+MONGODBCONNECTIONSTRING="mongodb+srv://u23556502:vD8wimIqSRIHq4KV@imy220.p46ps.mongodb.net/?retryWrites=true&w=majority&appName=IMY220"
+
+JWT_SECRET="secret"

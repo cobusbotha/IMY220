@@ -1,0 +1,49 @@
+/* Splash.css */
+@font-face {
+  font-family: 'Allegro';
+  src: url('../fonts/TT\ Neoris\ Trial\ Black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.splash-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #fcfcda, #8e92fc);
+  font-family: 'Allegro', Arial, sans-serif;
+}
+
+.splash-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.splash-header h1 {
+  font-size: 6em;
+  color: #222222;
+  margin-bottom: 10px;
+}
+
+.splash-header p {
+  font-size: 1.2em;
+  color: #000000;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+.splash-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.splash-actions > div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}

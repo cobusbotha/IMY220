@@ -1,0 +1,83 @@
+/* UserDetails.css */
+
+@font-face {
+  font-family: 'Allegro';
+  src: url('../fonts/TT Neoris Trial Black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.user-details-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Allegro', Arial, sans-serif;
+}
+
+.back-button, .save-button {
+  display: inline-block;
+  padding: 15px 30px;
+  margin: 20px auto;
+  font-size: 18px;
+  color: #fff;
+  background-color: #6a0dad;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Allegro', Arial, sans-serif;
+}
+
+.back-button:hover, .save-button:hover {
+  background-color: #4b0082;
+}
+
+h2, h3 {
+  color: #333;
+  text-align: center;
+  font-family: 'Allegro', Arial, sans-serif;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+}
+
+.grid li {
+  flex: 1 1 calc(33.333% - 20px);
+  box-sizing: border-box;
+}
+
+.relative {
+  position: relative;
+}
+
+.save-button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.profile-preview, .playlist-preview {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Allegro', Arial, sans-serif;
+}
+
+.profile-preview img, .playlist-preview img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.profile-preview p, .playlist-preview p {
+  margin: 10px 0;
+  font-family: 'Allegro', Arial, sans-serif;
+}

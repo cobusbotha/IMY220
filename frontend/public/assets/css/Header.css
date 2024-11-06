@@ -1,0 +1,60 @@
+/* Header.css */
+@font-face {
+  font-family: 'Allegro';
+  src: url('../fonts/TT\ Neoris\ Trial\ Black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #6a0dad;
+    color: white;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 1.5em;
+}
+
+nav a:hover {
+    background-color: #7a1bb8;
+}
+
+nav button {
+    background-color: #8a2be2;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 1.5em;
+}
+
+nav button:hover {
+    background-color: #7a1bb8;
+}
+
+nav .links {
+    display: flex;
+    align-items: center;
+}
+
+nav .logout {
+    display: flex;
+    align-items: center;
+}

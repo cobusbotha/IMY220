@@ -1,0 +1,54 @@
+/* CreateSong.css */
+.create-song-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f3f0ff;
+    padding: 1rem;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+#create-song {
+  color: #4b0082;
+  font-size: 2em;
+  margin-bottom: 1rem;
+}
+
+.create-song-form div {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.create-song-form label {
+    display: block;
+    font-size: 1.2em;
+    color: #4b0082;
+    margin-bottom: 0.5rem;
+}
+
+.create-song-form input[type="text"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.create-song-form button {
+    background-color: #8a2be2;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+}
+
+.create-song-form button:hover {
+    background-color: #7a1bb8;
+}
