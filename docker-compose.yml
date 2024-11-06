@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000" 
+    environment:
+      - MONGODBUSERNAME="u23556502"
+      - MONGODBPASSWORD="vD8wimIqSRIHq4KV"
+      - JWT_SECRET="secret"
+      - MONGODBCONNECTIONSTRING="mongodb+srv://u23556502:vD8wimIqSRIHq4KV@imy220.p46ps.mongodb.net/?retryWrites=true&w=majority&appName=IMY220"
+    depends_on:
+      - mongo
+    volumes:
+      - .:/app
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: IMY220-Project
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
